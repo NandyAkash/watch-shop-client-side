@@ -10,14 +10,14 @@ const MakeAdmin = () => {
     const email = user.email;
     console.log(email)
     useEffect(()=>{
-        fetch('http://localhost:5000/users')
+        fetch('https://pure-woodland-40650.herokuapp.com/users')
         .then(res=> res.json())
         .then(data=>setUsers(data))
 
     },[])
     const handleAdmin = (email) => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://pure-woodland-40650.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

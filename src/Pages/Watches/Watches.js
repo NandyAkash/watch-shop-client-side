@@ -5,7 +5,7 @@ import './Watches.css';
 const Watches = () => {
     const [watches, setWatches] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/watches')
+        fetch('https://pure-woodland-40650.herokuapp.com/watches')
         .then(res=>res.json())
         .then(data => setWatches(data))
     })

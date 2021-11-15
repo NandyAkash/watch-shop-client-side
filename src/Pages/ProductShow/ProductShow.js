@@ -6,7 +6,7 @@ import './ProductShow.css'
 const ProductShow =() => {
   const [watches, setWatches] = React.useState([]);
     React.useEffect(() => {
-        fetch('http://localhost:5000/watches')
+        fetch('https://pure-woodland-40650.herokuapp.com/watches')
         .then(res=>res.json())
         .then(data => setWatches(data))
         console.log(watches)

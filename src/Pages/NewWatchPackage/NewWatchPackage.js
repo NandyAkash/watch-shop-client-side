@@ -13,7 +13,7 @@ const NewWatchPackage = () => {
 
     const addOfferPackage = () => {
         const newOfferPackage = {name, cost, picture, caseSize,dialColor,description};
-        fetch('http://localhost:5000/watches',{
+        fetch('https://pure-woodland-40650.herokuapp.com/watches',{
             method:"POST",
             headers: {
                 "content-type": "application/json"

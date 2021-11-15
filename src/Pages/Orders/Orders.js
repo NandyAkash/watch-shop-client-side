@@ -16,7 +16,7 @@ const Orders = (props) => {
     const [orders, setOrders] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${uid}`)
+        fetch(`https://pure-woodland-40650.herokuapp.com/orders/${uid}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     },[orders])
@@ -25,7 +25,7 @@ const Orders = (props) => {
         console.log(id)
         const confirmDelete = window.confirm('Are you sure to delete it?');
         if(confirmDelete) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://pure-woodland-40650.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

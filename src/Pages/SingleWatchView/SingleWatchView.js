@@ -12,7 +12,7 @@ const SingleWatchView = () => {
     const [address, setAddress] = useState('');
     const history = useHistory();
     useEffect(() => {
-        fetch(`http://localhost:5000/watch/${id}`)
+        fetch(`https://pure-woodland-40650.herokuapp.com/watch/${id}`)
         .then(res=>res.json())
         .then(data => setSingleProduct(data))
     },[])
@@ -27,7 +27,7 @@ const SingleWatchView = () => {
         const selectedWatch = name;
         const WatchPrice = price;
         const orderPackage = {userId, userName, userEmail, userAddress, userNumber, selectedWatchId, selectedWatch, WatchPrice};
-        fetch('http://localhost:5000/orders',{
+        fetch('https://pure-woodland-40650.herokuapp.com/orders',{
             method:"POST",
             headers: {
                 "content-type": "application/json"
