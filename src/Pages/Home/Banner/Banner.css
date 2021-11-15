@@ -1,0 +1,30 @@
+.banner img {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  transition: none 0s ease 0s;
+}
+.centered p {
+  position: absolute !important;
+  top: 61vh !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  font-size: 60px;
+  color: white;
+  font-weight: 700;
+}
+.centered
+  button.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-1k93cx9-MuiButtonBase-root-MuiButton-root {
+  position: absolute !important;
+  top: 80vh !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: white;
+  font-weight: 700;
+  padding: 13px 26px;
+}

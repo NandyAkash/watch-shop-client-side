@@ -1,0 +1,14 @@
+.watch-collection {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 5px;
+}
+.wacthes
+  p.MuiTypography-root.MuiTypography-body1.css-ahj2mt-MuiTypography-root {
+  font-size: 46px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
