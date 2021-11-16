@@ -1,15 +1,16 @@
 import { Box } from '@mui/system';
 import React from 'react';
-import ProductShow from '../../ProductShow/ProductShow';
+import Carousal from '../../../Carousal';
+import {HappyClient} from '../../../HappyClient';
 import Watches from '../../Watches/Watches';
-import Banner from '../Banner/Banner';
 
 const Home = () => {
+
     return (
        <Box>
-           <Banner></Banner>
-           <Watches></Watches>
-           <ProductShow></ProductShow>
+           <Carousal />
+           <Watches ></Watches>
+           <HappyClient />
        </Box>
     );
 };

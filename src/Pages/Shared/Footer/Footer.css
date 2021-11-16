@@ -7,3 +7,9 @@
   font-size: 36px;
   font-weight: 700;
 }
+.MuiBox-root.css-j7qwjs {
+  position: fixed !important;
+  bottom: 0 !important;
+  z-index: 12222 !important;
+  width: 100vw !important;
+}

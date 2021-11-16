@@ -1,5 +1,6 @@
-img.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.css-o69gx8-MuiCardMedia-root {
-  object-fit: contain;
+img.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.css-o69gx8-MuiCardMedia-root,
+.css-rhsghg {
+  object-fit: contain !important;
 }
 p.MuiTypography-root.MuiTypography-body2.css-r40f8v-MuiTypography-root {
   padding: 10px;
