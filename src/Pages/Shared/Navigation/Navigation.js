@@ -15,19 +15,19 @@ const Navigation = () => {
                     <Toolbar>
                     {
                         user?.email ?
-                        <NavLink style={{textDecoration: "none", color: "white"}} to='./dashboard'><Button color="inherit">DashBoard</Button></NavLink>
+                        <NavLink style={{textDecoration: "none", color: "white"}} to='/dashboard'><Button color="inherit">DashBoard</Button></NavLink>
                         :
                         <IconButton></IconButton>
                     }
                     <Typography style={{paddingLeft: "60px"}} variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Watch Shop
                     </Typography>
-                    <NavLink style={{textDecoration: "none", color: "white"}} to='./watches'><Button color="inherit">Explore Watches</Button></NavLink>
+                    <NavLink style={{textDecoration: "none", color: "white"}} to='/watches'><Button color="inherit">Explore Watches</Button></NavLink>
                     {
                         user?.email ?
                         <Button onClick={logOut} color="inherit">LogOut</Button>
                         :
-                        <NavLink style={{textDecoration: "none", color: "white"}} to='./login'><Button color="inherit">Login</Button></NavLink>
+                        <NavLink style={{textDecoration: "none", color: "white"}} to='/login'><Button color="inherit">Login</Button></NavLink>
                     }
                     
                     </Toolbar>

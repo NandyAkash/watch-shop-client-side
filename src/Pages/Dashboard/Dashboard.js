@@ -26,6 +26,9 @@ import useAuth from '../../Hooks/useAuth';
 import AdminRoute from '../Login/AdminRoute/AdminRoute';
 import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
 import NewWatchPackage from '../NewWatchPackage/NewWatchPackage';
+import PostReview from './PostReview/PostReview';
+import PrivateRoute from '../Login/PrivateRoute/PrivateRoute';
+import Payments from '../Payment/Payments';
 const drawerWidth = 240;
 
 function Dashboard(props) {
@@ -51,7 +54,7 @@ function Dashboard(props) {
                 <Link style={{textDecoration:"none"}} to={`${url}/orders`}><ListItemText primary={'My Orders'} /></Link>
               </ListItem>
               <ListItem button key={'review'}>
-                <Link style={{textDecoration:"none"}} to={`${url}/review`}><ListItemText primary={'Review'} /></Link>
+                <Link style={{textDecoration:"none"}} to={`${url}/postreview`}><ListItemText primary={'Review'} /></Link>
               </ListItem>
               <ListItem button key={'logOut'}>
                 <Button onClick={logOut}><ListItemText primary={'LogOut'} /></Button>
@@ -152,6 +155,12 @@ function Dashboard(props) {
         <Route exact path={path}>
           <h1>Welcome to DashBoard</h1>
         </Route>
+        <PrivateRoute exact path={`${url}/postreview`}>
+          <PostReview />
+        </PrivateRoute>
+        <PrivateRoute exact path={`${url}/pay`}>
+          <Payments />
+        </PrivateRoute>
         <AdminRoute path={`${path}/makeadmin`}>
           <MakeAdmin />
         </AdminRoute>

@@ -53,6 +53,9 @@ const SingleWatchView = () => {
                     <Typography gutterBottom variant="h5" component="div">
                         {name}
                     </Typography>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {price}
+                    </Typography>
                     <Typography variant="body2" color="text.secondary">
                        {description}
                     </Typography>

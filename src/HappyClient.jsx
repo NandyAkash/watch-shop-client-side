@@ -1,42 +1,49 @@
 import React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@mui/material'
+import { Paper, Typography } from '@mui/material'
+import { styled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-export const HappyClient = (props) => 
-{
-    var items = [
-        {
-
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!"
-        },
-        {
-            name: "Random Name #2",
-            description: "Hello World!"
-        }
-    ]
+export const HappyClient = ({reviews}) => 
+{   
 
     return (
-        <Carousel style={{marginBottom:"150px !important"}}>
+        <div style={{marginBottom: "90px"}}>
+            <Typography style={{fontSize: "26px", marginTop: "60px" ,marginBottom:"25px", fontWeight: "600"}}>
+                Some of our Happy Clients
+            </Typography>
+            <Carousel style={{marginBottom:"150px !important"}}>
             {
-                items.map( (item, i) => <Item key={i} item={item} /> )
+                reviews?.map( (item, i) => <Item key={i} item={item} /> )
             }
-        </Carousel>
+            </Carousel>
+        </div>
     )
 }
-
+const StyledRating = styled(Rating)({
+    "& .MuiRating-iconFilled": {
+      color: "#ff6d75"
+    },
+    "& .MuiRating-iconHover": {
+      color: "#ff3d47"
+    }
+  });
 function Item(props)
 {
     return (
       
             <Paper>
-                <h2 style={{display:"flex", alignItems: "center", justifyContent:"center"}} center><Avatar alt="Remy Sharp" src={"/static/images/avatar/1.jpg"} /> {props.item.name}</h2>
-            <p>{props.item.description}</p>
-
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
+            <h4 style={{display:"flex", alignItems: "center", justifyContent:"center"}} center>Product Name:<br/> {props.item.watch}</h4>
+            <p>Review: {props.item.comment}</p>
+                            <StyledRating
+                                name="customized-color"
+                                defaultValue={props.item.rating}
+                                precision={0.5}
+                                icon={<FavoriteIcon fontSize="inherit" />}
+                                emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                            />
         </Paper>
         
         

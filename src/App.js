@@ -17,7 +17,8 @@ import NewWatchPackage from './Pages/NewWatchPackage/NewWatchPackage';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Orders from './Pages/Orders/Orders';
 import ManageAllOrder from './Pages/ManageAllOrder/ManageAllOrder';
-import Footer from './Pages/Shared/Footer/Footer';
+import Review from './Pages/Home/Review/Review';
+import PostReview from './Pages/Dashboard/PostReview/PostReview';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Switch>
                 <Route path="/home">
                   <Home />
+                  
                 </Route>
                 <Route path="/watches">
                   <Watches />
@@ -39,12 +41,17 @@ function App() {
                 <PrivateRoute path='/newWatchAdd'>
                   <NewWatchPackage />
                 </PrivateRoute>
-                
                 <PrivateRoute path='/manageorder'>
                   <ManageAllOrder />
                 </PrivateRoute>
                 <PrivateRoute path='/orders'>
                   <Orders />
+                </PrivateRoute>
+                <PrivateRoute path='/review'>
+                  <Review />
+                </PrivateRoute>
+                <PrivateRoute path='/postreview'>
+                  <PostReview />
                 </PrivateRoute>
                 
                 <PrivateRoute path='/dashboard'>
@@ -60,7 +67,7 @@ function App() {
                   <Home />
                 </Route>
             </Switch>
-            <Footer></Footer>
+            
         </Router>
       </AuthProvider>
     </div>

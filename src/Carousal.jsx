@@ -12,7 +12,7 @@ function Carousal() {
         console.log(watches)
     },[])
     return (
-        <Carousel>
+        <Carousel autoPlay={false} index={watches.length}>
             {
                 watches.slice(0,6).map( (item, i) => <Item key={i} item={item} /> )
             }
