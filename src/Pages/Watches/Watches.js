@@ -1,5 +1,6 @@
 import { Container, Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react';
+import ManageProducts from '../ManageProducts/ManageProducts';
 import Watch from '../Watch/Watch';
 import './Watches.css';
 const Watches = (props) => {

@@ -22,10 +22,17 @@ const Navigation = () => {
                     <Typography style={{paddingLeft: "60px"}} variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Watch Shop
                     </Typography>
-                    <NavLink style={{textDecoration: "none", color: "white"}} to='/watches'><Button color="inherit">Explore Watches</Button></NavLink>
+                    <NavLink style={{textDecoration: "none", color: "white"}} to='/watches'><Button color="inherit">More Watches</Button></NavLink>
                     {
                         user?.email ?
-                        <Button onClick={logOut} color="inherit">LogOut</Button>
+                        (
+                            <>
+                            <Button onClick={logOut} color="inherit">LogOut</Button>
+                            <Typography>
+                                Hello, <a style={{marginLeft:"5px",textDecoration:"none", color:"white"}} href="#login">{user?.displayName}</a>
+                            </Typography>
+                            </>
+                        )
                         :
                         <NavLink style={{textDecoration: "none", color: "white"}} to='/login'><Button color="inherit">Login</Button></NavLink>
                     }

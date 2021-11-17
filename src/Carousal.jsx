@@ -3,19 +3,21 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 import { Link } from 'react-router-dom';
 
+
 function Carousal() {
     const [watches, setWatches] = React.useState([]);
     React.useEffect(() => {
         fetch('https://pure-woodland-40650.herokuapp.com/watches')
         .then(res=>res.json())
-        .then(data => setWatches(data))
+        .then(data => setWatches(data.slice(0,6)))
         console.log(watches)
     },[])
     return (
-        <Carousel>
+        <Carousel autoPlay>
             {
                 watches.slice(0,6).map( (item, i) => <Item key={i} item={item} /> )
             }
+            
         </Carousel>
     )
 }

@@ -10,28 +10,10 @@ const Login = () => {
     const { user, loginUser, isLoading, authError, signInGoogle } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    // const redirect_uri = location.state?.from?.pathname || '/home';
     
     const handleGoogleLogin = () => {
         signInGoogle(location, history)
 
-        // .then((result) => {
-            
-        //     history.push(redirect_uri)
-        //     const name =  result.user.displayName;
-        //     const email =  result.user.email ;
-        //     const newUser = {name, email, role:"user"};
-        //     fetch('https://pure-woodland-40650.herokuapp.com/users',{
-        //         method:"POST",
-        //         headers: {
-        //             "content-type": "application/json"
-        //         },
-        //         body: JSON.stringify(newUser)
-        //     })
-        //     .then(res=> res.json())
-        //     .catch(err => console.log(err));
-            
-        // })
             
     }
 
@@ -47,8 +29,9 @@ const Login = () => {
     const handleLogin = (e) => {
         loginUser(loginData.email, loginData.password, location, history)
         e.preventDefault();
+        
     }
-   
+    
     return (
         <Container>
             <Grid>

@@ -19,6 +19,8 @@ import Orders from './Pages/Orders/Orders';
 import ManageAllOrder from './Pages/ManageAllOrder/ManageAllOrder';
 import Review from './Pages/Home/Review/Review';
 import PostReview from './Pages/Dashboard/PostReview/PostReview';
+import ContactUs from './Pages/Home/ContactUs/ContactUs';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -30,10 +32,12 @@ function App() {
             <Switch>
                 <Route path="/home">
                   <Home />
-                  
                 </Route>
                 <Route path="/watches">
                   <Watches />
+                </Route>
+                <Route path="/contact">
+                  <ContactUs />
                 </Route>
                 <PrivateRoute path='/watch/:id'>
                   <SingleWatchView />
@@ -53,7 +57,6 @@ function App() {
                 <PrivateRoute path='/postreview'>
                   <PostReview />
                 </PrivateRoute>
-                
                 <PrivateRoute path='/dashboard'>
                   <Dashboard />
                 </PrivateRoute>
@@ -63,8 +66,11 @@ function App() {
                 <Route path="/register">
                   <Register />
                 </Route>
-                <Route path="/">
+                <Route exact path="/">
                   <Home />
+                </Route>
+                <Route path="*">
+                  <NotFound />
                 </Route>
             </Switch>
             

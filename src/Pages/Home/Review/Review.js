@@ -11,7 +11,7 @@ const Review = () => {
   },[])
 
     return (
-      <div>
+      <div style={{display: "grid", placeItems: "center"}}>
       {
         <HappyClient reviews={reviews}></HappyClient>
       }

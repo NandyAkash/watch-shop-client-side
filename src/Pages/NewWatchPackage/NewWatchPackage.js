@@ -5,14 +5,14 @@ import './NewWatchPackage.css'
 
 const NewWatchPackage = () => {
     const [name, setName] = useState('');
-    const [cost, setCost] = useState('');
+    const [price, setPrice] = useState('');
     const [picture, setPicture] = useState('');
     const [dialColor, setDialColor] = useState('');
     const [caseSize, setCaseSize] = useState('');
     const [description, setDescription] = useState('');
 
     const addOfferPackage = () => {
-        const newOfferPackage = {name, cost, picture, caseSize,dialColor,description};
+        const newOfferPackage = {name, price, picture, caseSize,dialColor,description};
         fetch('https://pure-woodland-40650.herokuapp.com/watches',{
             method:"POST",
             headers: {
@@ -46,7 +46,7 @@ const NewWatchPackage = () => {
         />
         <TextField
           id="outlined-disabled"
-          value={cost} onChange={(e)=> setCost(e.target.value)} type="text" placeholder="Watch Price" 
+          value={price} onChange={(e)=> setPrice(e.target.value)} type="text" placeholder="Watch Price" 
         />
         <TextField
           id="outlined-picture-input"

@@ -6,6 +6,7 @@ import Watch from '../../Watch/Watch';
 import Review from '../Review/Review';
 import './Home.css';
 import Footer from '../../Shared/Footer/Footer'
+import ContactUs from '../ContactUs/ContactUs';
 
 const Home = () => {
     const [watches, setWatches] = useState([]);
@@ -13,7 +14,7 @@ const Home = () => {
         fetch('https://pure-woodland-40650.herokuapp.com/watches')
         .then(res=>res.json())
         .then(data => setWatches(data))
-    })
+    },[])
     return (
        <div>
            
@@ -31,6 +32,7 @@ const Home = () => {
                 }
             </Box>
             <Review />
+            <ContactUs />
             </Container>
             <Footer />
         </div>
